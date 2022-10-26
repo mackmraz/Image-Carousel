@@ -1,0 +1,29 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --slider-padding: 5rem;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.slider {
+    display: flex;
+    width: calc(100% - 2 * var(--slider-padding));
+    transform: translateX(-0%)
+}
+
+.slider > img {
+    flex: 0 0 25%;
+    max-width: 25%;
+    aspect-ratio: 16 / 9;
+    padding: .25rem;
+}
