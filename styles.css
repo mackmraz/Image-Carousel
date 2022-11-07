@@ -18,6 +18,8 @@ body {
     flex-grow: 1;
     margin: 0 .25rem;
     transform: translateX(calc(var(--slider-index) * -100%));
+    transition: transform 250ms ease-in-out;
+    overflow: hidden;
 }
 
 .slider > img {

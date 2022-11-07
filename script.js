@@ -9,13 +9,15 @@ document.addEventListener("click", e => {
 })
 
 function onHandleClick(handle) {
-    const slider = handle.closest(".container").queryselector("slider")
+    const slider = handle.closest(".container").querySelector(".slider")
     const sliderIndex = parseInt(
-        getComputedStyle(slider).getPropertyValue("--slider-index"))
-    if (handle.classlist.contain("left-handle")) {
+        getComputedStyle(slider).getPropertyValue("--slider-index")
+        )
+    if (handle.classList.contains("left-handle")) {
         slider.style.setProperty("--slider-index", sliderIndex - 1)
     }
-    if (handle.classlist.contain("right-handle")) {
+
+    if (handle.classList.contains("right-handle")) {
         slider.style.setProperty("--slider-index", sliderIndex + 1)
     }
 }
