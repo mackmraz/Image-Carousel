@@ -18,6 +18,7 @@ body {
 }
 
 .slider {
+    --items-per-screen: 4;
     --slider-index: 0;
     display: flex;
     flex-grow: 1;
@@ -27,8 +28,8 @@ body {
 }
 
 .slider > img {
-    flex: 0 0 25%;
-    max-width: 25%;
+    flex: 0 0 calc(100% / var(--items-per-screen));
+    max-width: calc(100% / var(--items-per-screen));
     min-height: 150px;
     aspect-ratio: 16 / 9;
     padding: var(--img-gap);
@@ -94,4 +95,11 @@ body {
 }
 
 .progress-bar{
+    display: flex;
+}
+
+@media(max-width: 1000px) {
+    .slider {
+        --items-per-screen: 3;
+    }
 }
