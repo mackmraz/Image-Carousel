@@ -1,1 +1,1 @@
-This is just a basic test of how to make an image carousel using only HTML and CSS.
+This is just a basic test of how to make an image carousel using HTML CSS and some JS.
