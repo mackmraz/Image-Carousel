@@ -15,8 +15,7 @@ window.addEventListener("resize", (e) => {
 function onHandleClick(handle) {
     const slider = handle.closest(".container").querySelector(".slider")
     const sliderIndex = parseInt(
-        getComputedStyle(slider).getPropertyValue("--slider-index")
-        )
+        getComputedStyle(slider).getPropertyValue("--slider-index"))
     if (handle.classList.contains("left-handle")) {
         slider.style.setProperty("--slider-index", sliderIndex - 1)
     }
