@@ -43,7 +43,7 @@ body {
     border-radius: 1rem;
     flex-grow: 0;
     flex-shrink: 0;
-    background-color: rgba(0,0,0,0.25);
+    background-color: rgba(155,155,155,0.25);
     z-index: 10;
     margin: var(--img-gap) 0;
     width: var(--handle-size);
@@ -55,7 +55,7 @@ body {
     justify-content: center;
     line-height: 0;
     color: white;
-    transition: background-color 150ms ease-in-out;
+    transition: background-color 250ms ease-in-out;
 }
 
 .left-handle {
@@ -70,25 +70,23 @@ body {
 
 .handle:hover,
 .handle:focus {
-    background-color: rgba(0,0,0,0.5);
-}
-
-.handle:hover .text,
-.handle:focus .text{
-    transform: scale(1.1);
+    background-color: rgba(255,255,255,0.5);
 }
 
 .text {
     transition: transform 150ms ease-in-out;
 }
 
-.row {
+.handle:hover .text,
+.handle:focus .text{
+    transform: scale(1.2);
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     padding: .5 calc(var(--img-gap) * 2 + var(--handle-size));
+    align-items: center;
 }
 
 .title {
