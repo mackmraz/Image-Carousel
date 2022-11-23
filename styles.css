@@ -102,10 +102,14 @@ body {
 }
 
 .progress-item {
-    flex: 0 0 2rem;
-    min-width: 2rem;
-    height: 1rem;
-    background-color: red;
+    flex: 0 0 1.5rem;
+    min-width: 1.5rem;
+    height: .5rem;
+    background-color: rgba(255,255,255, .5);
+}
+
+.progress-item.active {
+    background-color: rgba(255,255,255, .9);
 }
 
 @media(max-width: 1000px) {
