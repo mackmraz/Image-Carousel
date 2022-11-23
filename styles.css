@@ -32,7 +32,6 @@ body {
 .slider > img {
     flex: 0 0 calc(100% / var(--items-per-screen));
     max-width: calc(100% / var(--items-per-screen));
-    min-height: 150px;
     aspect-ratio: 16 / 9;
     padding: var(--img-gap);
     border-radius: 1rem;
@@ -47,7 +46,6 @@ body {
     z-index: 10;
     margin: var(--img-gap) 0;
     width: var(--handle-size);
-    padding: 0 .5rem;
     cursor: pointer;
     font-size: 5rem;
     display: flex;
@@ -55,7 +53,7 @@ body {
     justify-content: center;
     line-height: 0;
     color: white;
-    transition: background-color 250ms ease-in-out;
+    transition: background-color 200ms ease-in-out;
 }
 
 .left-handle {
