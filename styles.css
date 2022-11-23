@@ -115,3 +115,9 @@ body {
         --items-per-screen: 3;
     }
 }
+
+@media(max-width: 500px) {
+    .slider {
+        --items-per-screen: 2;
+    }
+}

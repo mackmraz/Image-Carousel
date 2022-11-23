@@ -8,9 +8,11 @@ document.addEventListener("click", e => {
     if (handle != null) onHandleClick(handle)
 })
 
-window.addEventListener("resize", (e) => {
-    //recalculate progress bar
-})
+const throttleProgressBar = throttle(() => {
+    document.querySelectorAll(".progress-bar").forEach
+    (calculateProgressBar)
+}, 250)
+window.addEventListener("resize", throttleProgressBar)
 
 document.querySelectorAll(".progress-bar").forEach
 (calculateProgressBar)
@@ -22,11 +24,16 @@ function calculateProgressBar(progressBar) {
     const itemsPerScreen = parseInt(
         getComputedStyle(slider).getPropertyValue("--items-per-screen")
     )
-    const sliderIndex = parseInt(
+    let sliderIndex = parseInt(
             getComputedStyle(slider).getPropertyValue("--slider-index")
     )
-    const progressBarItemCount = Math.ceil
-    (itemCount / itemsPerScreen)
+    const progressBarItemCount = Math.ceil(itemCount / itemsPerScreen)
+
+    if (sliderIndex >= progressBarItemCount) {
+        slider.style.setProperty("--slider-index",progressBarItemCount - 1)
+        sliderIndex = progressBarItemCount - 1
+    }
+    
     for (let i = 0; i < progressBarItemCount; i++) {
         const barItem = document.createElement("div")
         barItem.classList.add("progress-item")
@@ -89,4 +96,3 @@ function throttle(cb,delay = 1000) {
         setTimeout(timeoutFunc, delay)
     }
 }
-
