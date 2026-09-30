@@ -2,7 +2,7 @@
 
 A lightweight, responsive image carousel built with plain HTML, CSS, and JavaScript. There are no frameworks or dependencies. It shows several images at a time, pages through them with left and right handles, loops in both directions, and has a progress indicator that updates to match the screen size.
 
-> **Status: finished practice project (2022).** See [Known issues](#known-issues) below.
+> **Status: finished practice project (2022).**
 
 ## Features
 - **Multi-item slider** that shows 4 images per page on wide screens, 3 at 1000px and below, and 2 at 500px and below (CSS media queries)
@@ -33,7 +33,3 @@ index.html   Markup: header with title and progress bar, handles, and slider ima
 styles.css   Layout, responsive items-per-page, transitions, handle and progress styles
 script.js    Handle clicks, looping, progress bar calculation, and resize throttling
 ```
-
-## Known issues
-- The demo images come from `via.placeholder.com`, which no longer serves images, so the slides may appear empty. Replace the `<img src>` URLs in `index.html` with your own images to see the carousel in action.
-- The `throttle` helper in `script.js` has a typo (`argsreturn` should be `args`). It can throw an error while the window is being resized quickly.

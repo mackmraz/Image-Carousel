@@ -89,7 +89,8 @@ function throttle(cb,delay = 1000) {
 
     return (...args) => {
         if (shouldWait) {
-            waitingArgs = argsreturn
+            waitingArgs = args
+            return
         }
         cb(...args)
         shouldWait = true
